@@ -34,7 +34,7 @@ class Atendimento {
                 else {
                     // console.log ("Novo atendimento criado.")
                     // console.log (result);
-                    res.status(201).json (result);
+                    res.status(201).json (atendimentoDatado);
                 }
             });
         }
@@ -76,9 +76,21 @@ class Atendimento {
                 res.status(400).json(error);
             }
             else {
-                res.status(200).json (result);
+                res.status(200).json ({...values, id});
             }
         });
+    }
+
+    delete (id, res) {
+       const sql = `DELETE FROM Atendimentos WHERE id =` + id;
+       connection.query(sql, (error, result) => {
+            if (error) {
+                res.status(400).json(error);
+            }
+            else {
+                res.status(200).json(id);
+            }
+       }); 
     }
 }
 
