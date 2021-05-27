@@ -3,7 +3,7 @@ const { mergeTypeDefs } = require('graphql-tools');
 
 const userSchema = require ('./user/schema/user.graphql');
 const userResolvers = require ('./user/resolvers/userResolvers');
-const UsersAPI = require ('./user/datasource/user.js');
+const UsersAPI = require ('./user/datasource/user');
 // const productSchema = require ();
 
 const typeDefs = [ userSchema ];
