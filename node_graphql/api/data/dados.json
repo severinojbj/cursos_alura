@@ -41,6 +41,14 @@
       "ativo": true,
       "email": "m@m.com",
       "role": 2
+    },
+    {
+      "nome": "Teste1100",
+      "ativo": true,
+      "email": "teste@teste.com.br",
+      "role": 2,
+      "createdAt": "2021-05-31T00:00:00.000Z",
+      "id": 7
     }
   ],
   "roles": [
